@@ -16,6 +16,10 @@
 			<input type="submit" id="Convertir" runat="server" value="Aceptar" OnServerClick ="Convertir_ServerClick" />
 			<br/>
 			<div style="font-weight:bold" id="Resultado" runat="server"></div>&nbsp;
+			<br /><br />
+			<input type="submit" id="MostrarGrafico" runat="server" value="Mostrar Figura" OnServerClick ="MostrarGrafico_ServerClick" />
+			<br /><br />
+			<img id="Grafico" runat="server" />
 		</div>
 		</form>
 	</body>
