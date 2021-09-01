@@ -1,0 +1,56 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="Artefactos.SiteMaster" %>
+
+<!DOCTYPE html>
+
+<html lang="es">
+    <script languaje="C#" runat="server">
+        void Pulsado(Object sender, EventArgs args)
+        {
+            if(lista.Value == "Plancha")
+            {
+                etiqueta.InnerText = "Nombre del producto: "+lista.Value+" Codigo:AEX1"+" Descripción: La suela de doble capa tiene una avanzada tecnología de vapor. "+"Marca:Oster "+"Precio: S/.160";
+            }
+            if(lista.Value == "Licuadora")
+            {
+                etiqueta.InnerText = "Nombre del producto: "+lista.Value+" Codigo:AEX2"+" Descripción: Jarra de plástico súper resistente con un tamaño familiar de 2L. "+"Marca:Philips "+"Precio: S/.140";
+            }
+            if(lista.Value == "Cocina")
+            {
+                etiqueta.InnerText = "Nombre del producto: "+lista.Value+" Codigo:AEX3"+" Descripción: Tapa vidrio templado recto y Doble Quemador ultra rápido (triple corona). "+"Marca:Indurama "+"Precio: S/.1529";
+            }
+            if(lista.Value == "Microondas")
+            {
+                etiqueta.InnerText = "Nombre del producto: "+lista.Value+" Codigo:AEX4"+" Descripción: Sistema TDS - Tiple distribución de ondas y 10 niveles de potencia. "+"Marca:Samsung "+"Precio: S/.289";
+            }
+            if(lista.Value == "Cafetera")
+            {
+                etiqueta.InnerText = "Nombre del producto: "+lista.Value+" Codigo:AEX5"+" Descripción: Admite cafe en capsulas y tiene una capacidad de 0.8L "+"Marca:Nescafe "+"Precio: S/.599";
+            }
+        }
+    </script>
+<head runat="server">
+    <title><%: Page.Title %> Artefactos</title>
+</head>
+<body bgcolor="#EC7063">
+    <form id="WebForm" method="post" runat="server">
+        <h1>Seleccionar Artefacto</h1>
+        <select id="lista" runat="server">
+            <option selected>Plancha</option>
+            <option>Licuadora</option>
+            <option>Cocina</option>
+            <option>Microondas</option>
+            <option>Cafetera</option>
+        </select>
+        <input type="button" id="boton" runat="server" value="Seleccionar" onserverclick="Pulsado" /> &nbsp; 
+        <input type="submit" id="MostrarGrafico" runat="server" value="Mostrar Electrodomestico" OnServerClick ="MostrarGrafico_ServerClick" />
+        <br /><br />
+        <div id="etiqueta" runat="server"></div>
+        <br /><br />
+        <img id="Grafico" runat="server" />
+    </form>
+</body>
+</html>
+
+
+
+
